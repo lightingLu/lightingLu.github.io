@@ -11,7 +11,7 @@ tags:
     - webview
 ---
 
-   项目中需要webview重定向，但是由于一个webveiw里面有许多加载操作，因此在调用webview。goback()方法时，往往达不到我们需要的操作效果。
+ 项目中需要webview重定向，但是由于一个webveiw里面有许多加载操作，因此在调用webview。goback()方法时，往往达不到我们需要的操作效果。
 
 ####1.解决方法
 **WebBackForwardList webBackForwardList=webview.copyBackForwardList()获取webview加载栈，然后更具加载栈做逻辑操作**
@@ -40,14 +40,8 @@ webBackForwardList.getItemAtIndex(index)获取加载栈中第index页面；
             }
             webView.goBack();
         }
-       
         return true;
     }
 
 ```
 
-
-
-
-[Linux_Doc_Proj]: http://www.tldp.org/index.html
-[LPIC]: https://en.wikipedia.org/wiki/Linux_Professional_Institute_Certification
