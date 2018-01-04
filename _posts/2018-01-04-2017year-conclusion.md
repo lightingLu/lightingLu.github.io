@@ -4,7 +4,7 @@ title:      "2017年度总结"
 subtitle:   "2017的点点滴滴"
 date:       2018-01-04
 author:     "light"
-header-img: ""
+header-img: "/img/bg.jpg"
 catalog:    true
 tags:
     - 总结
