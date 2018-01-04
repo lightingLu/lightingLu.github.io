@@ -1,10 +1,10 @@
 # Site settings
-title: 鲁大先生
-SEOTitle: 鲁大先生的博客 | Light Blog
+title: Light
+SEOTitle: Light的博客 | Light Blog
 header-img: img/home-bg-hill.jpg
 email: threelu0917@gmail.com
 description: "描述"
-keyword: "鲁大先生, android, python,java, python, C/C++, 编解码"
+keyword: "Light, android, python,java, python, C/C++, 编解码"
 url: "https://threelu.github.io"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
