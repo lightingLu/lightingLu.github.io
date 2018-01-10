@@ -33,27 +33,28 @@ tags:
 
 #### 绘制颜色
 
-* ### Canvas.drawColor(@ColorInt int color) 颜色填充
+* Canvas.drawColor(@ColorInt int color) 颜色填充
 
-* ### drawColor(Color.BLACK)` 会把整个区域染成纯黑色，覆盖掉原有内容； ` 
+*  drawColor(Color.BLACK)` 会把整个区域染成纯黑色，覆盖掉原有内容； ` 
 
-* ### drawColor(Color.parse("#88880000") 会在原有的绘制效果上加一层半透明的红色遮罩
+*  drawColor(Color.parse("#88880000") 会在原有的绘制效果上加一层半透明的红色遮罩
 
-* ### drawRGB(int r, int g, int b)
+*  drawRGB(int r, int g, int b)
 
-* ### drawARGB(int a, int r, int g, int b)
+*  drawARGB(int a, int r, int g, int b)
 
-### 画图像，一般需要四个点的为上下左右的距离
+> 画图像，一般需要四个点的为上下左右的距离
 
 * drawCircle(float centerX, float centerY, float radius, Paint paint) 画圆
 
-* ### drawRect(float left, float top, float right, float bottom, Paint paint) 画矩形
+* drawRect(float left, float top, float right, float bottom, Paint paint) 画矩形
 
-* ### drawPoint(float x, float y, Paint paint) 画点
+* drawPoint(float x, float y, Paint paint) 画点
 
   >  点的大小可以通过 `paint.setStrokeWidth(width)` 来设置；点的形状可以通过 `paint.setStrokeCap(cap)` 来   设置：`ROUND` 画出来是圆形的点，`SQUARE` 或 `BUTT` 画出来是方形的点
 
-  ### drawPoints(float[] pts, int offset, int count, Paint paint) / drawPoints(float[] pts, Paint paint) 画点（批量）
+
+ *     drawPoints(float[] pts, int offset, int count, Paint paint) / drawPoints(float[] pts, Paint paint) 画点（批量）
 
   ```Java
   float[] points = {0, 0, 50, 50, 50, 100, 100, 50, 100, 100, 150, 50, 150, 100};  
@@ -62,24 +63,23 @@ tags:
             8 /* 一共绘制 8 个数（4 个点）*/, paint);
   ```
 
-  ​
 
-* ### drawOval(float left, float top, float right, float bottom, Paint paint) 画椭圆
+*  drawOval(float left, float top, float right, float bottom, Paint paint) 画椭圆
 
-* ### drawLine(float startX, float startY, float stopX, float stopY, Paint paint) 画线
+*  drawLine(float startX, float startY, float stopX, float stopY, Paint paint) 画线
 
-* ### drawLines(float[] pts, int offset, int count, Paint paint) / drawLines(float[] pts, Paint paint) 画线（批量）
+*  drawLines(float[] pts, int offset, int count, Paint paint) / drawLines(float[] pts, Paint paint) 画线（批量）
 
   ```Java
   float[] points = {20, 20, 120, 20, 70, 20, 70, 120, 20, 120, 120, 120, 150, 20, 250, 20, 150, 20, 150, 120, 250, 20, 250, 120, 150, 120, 250, 120};  
   canvas.drawLines(points, paint); 
   ```
 
-* ### drawRoundRect(float left, float top, float right, float bottom, float rx, float ry, Paint paint) 画圆角矩形
+*  drawRoundRect(float left, float top, float right, float bottom, float rx, float ry, Paint paint) 画圆角矩形
 
   `left`, `top`, `right`, `bottom` 是四条边的坐标，`rx` 和 `ry` 是圆角的横向半径和纵向半径。
 
-* ### drawArc(float left, float top, float right, float bottom, float startAngle, float sweepAngle, boolean useCenter, Paint paint) 绘制弧形或扇形
+*  drawArc(float left, float top, float right, float bottom, float startAngle, float sweepAngle, boolean useCenter, Paint paint) 绘制弧形或扇形
 
   > `drawArc()` 是使用一个椭圆来描述弧形的。`left`, `top`, `right`, `bottom` 描述的是这个弧形所在的椭圆；`startAngle` 是弧形的起始角度（x 轴的正向，即正右的方向，是 0 度的位置；顺时针为正角度，逆时针为负角度），`sweepAngle` 是弧形划过的角度；`useCenter` 表示是否连接到圆心，如果不连接到圆心，就是弧形，如果连接到圆心，就是扇形 
 
@@ -93,15 +93,15 @@ tags:
 
   * addCircle(float x, float y, float radius, Direction dir) 添加圆
 
-  * ###### addOval(float left, float top, float right, float bottom, Direction dir) / addOval(RectF oval, Direction dir) 添加椭圆
+  *  addOval(float left, float top, float right, float bottom, Direction dir) / addOval(RectF oval, Direction dir) 添加椭圆
 
-  * ###### addRect(float left, float top, float right, float bottom, Direction dir) / addRect(RectF rect, Direction dir) 添加矩形
+  *  addRect(float left, float top, float right, float bottom, Direction dir) / addRect(RectF rect, Direction dir) 添加矩形
 
-  * ###### addRoundRect(RectF rect, float rx, float ry, Direction dir) / addRoundRect(float left, float top, float right, float bottom, float rx, float ry, Direction dir) / addRoundRect(RectF rect, float[] radii, Direction dir)
+  *  addRoundRect(RectF rect, float rx, float ry, Direction dir) / addRoundRect(float left, float top, float right, float bottom, float rx, float ry, Direction dir) / addRoundRect(RectF rect, float[] radii, Direction dir)
 
-  * ###### addRoundRect(float left, float top, float right, float bottom, float[] radii, Direction dir) 添加圆角矩形
+  *  addRoundRect(float left, float top, float right, float bottom, float[] radii, Direction dir) 添加圆角矩形
 
-  * ###### addPath(Path path) 添加另一个 Path
+  *  addPath(Path path) 添加另一个 Path
 
 * ##### 第二组：`xxxTo()` ——画线（直线或曲线）
 
@@ -113,11 +113,11 @@ tags:
 
   * moveTo(float x, float y) / rMoveTo(float x, float y) 移动到目标位置
 
-  * ###### arcTo(RectF oval, float startAngle, float sweepAngle, boolean forceMoveTo) / arcTo(float left, float top, float right, float bottom, float startAngle, float sweepAngle, boolean forceMoveTo) / arcTo(RectF oval, float startAngle, float sweepAngle) 画弧形
+  *  arcTo(RectF oval, float startAngle, float sweepAngle, boolean forceMoveTo) / arcTo(float left, float top, float right, float bottom, float startAngle, float sweepAngle, boolean forceMoveTo) / arcTo(RectF oval, float startAngle, float sweepAngle) 画弧形
 
     > `forceMoveTo` 参数的意思是，绘制是要「抬一下笔移动过去」，还是「直接拖着笔过去」，区别在于是否留下移动的痕迹
 
-    * addArc(float left, float top, float right, float bottom, float startAngle, float sweepAngle) / addArc(RectF oval, float startAngle, float sweepAngle)
+  * addArc(float left, float top, float right, float bottom, float startAngle, float sweepAngle) / addArc(RectF oval, float startAngle, float sweepAngle)
 
       > 又是一个弧形的方法。一个叫 `arcTo` ，一个叫 `addArc()`，都是弧形，区别在哪里？其实很简单： `addArc()` 只是一个直接使用了 `forceMoveTo = true` 的简化版 `arcTo()` 。
 
@@ -129,7 +129,7 @@ tags:
 
   ## 4.其他方法
 
-  * ### drawText(String text, float x, float y, Paint paint) 绘制文字
+  *  drawText(String text, float x, float y, Paint paint) 绘制文字
 
   * drawBitmap(Bitmap bitmap, float left, float top, Paint paint) 画 Bitmap
 

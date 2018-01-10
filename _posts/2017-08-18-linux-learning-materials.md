@@ -4,18 +4,10 @@ title:      "Linux学习从入门到精通推荐书籍"
 subtitle:   "从入门到精通"
 date:       2017-08-18
 author:     "keysaim"
-header-img: ""
+header-img: "*/img/bg.jpg"
 catalog:    true
 tags:
     - linux
-    - 推荐
-    - 书籍
-    - 命令行
-    - 脚本
-    - 系统管理
-    - sysadmin
-    - 网络
-    - 安全
 ---
 
 # 如何学习Linux
