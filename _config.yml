@@ -1,108 +1,50 @@
 # Site settings
-title: 鲁大先生
-SEOTitle: 鲁大先生的博客 | Light Blog
-header-img: img/home-bg-hill.jpg
-email: threelu0917@gmail.com
-description: "描述"
-keyword: "鲁大先生, android, python,java, C/C++, 爬虫，自动化测试"
-url: "https://threelu.github.io"              # your host, for absolute URL
-baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
+title: 闫肃的博客
+email: suyan0830@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  闫肃的博客
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: http://yansu.org # the base hostname & protocol for your site
+rss_url: /pages/feed.xml
+author: Su Yan
 
+# Sidebar filter
+# Choose 'tag' or 'category' as filter in sidebar.
+filter: 'category'
+recent_num: 20
 
+# Social account
+twitter: suyan404
+weibo: suyan0830
+github: suyan
+instagram: suyan404
+linkedin: suyan404
 
-# SNS settings
-RSS: false
-#weibo_username:     keysaim
-zhihu_username:     lu-zi-qian/activities
-github_username:    threelu
-#twitter_username:   keysaim
-#jianshu_username:   f52aedb89ce8
-csdn_username:  dg_summer
-# linkedin_username:  firstname-lastname-idxxxx
+# avatar and Favicon
+avatar: http://7u2ho6.com1.z0.glb.clouddn.com/site-avatar.png
+favicon: http://7u2ho6.com1.z0.glb.clouddn.com/site-favicon.ico
 
+# disqus config
+disqus:
+  shortname: suyan-zh
 
+# google analytics config
+ga:
+  id: UA-54767140-1
+  url: yansu.org
 
 # Build settings
-# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
-highlighter: rouge
-permalink: pretty
-paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
-
-
-
-# Gems
-# from PR#40, to support local preview for Jekyll 3.0
-gems: [jekyll-paginate]
-
-
-
-# Markdown settings
-# replace redcarpet to kramdown,
-# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
-# document: http://jekyllrb.com/docs/configuration/#kramdown
+permalink: /:year/:month/:day/:title.html
 markdown: kramdown
-kramdown:
-  input: GFM                            # use Github Flavored Markdown !important
-#markdown: redcarpet
-#redcarpet:
-    #extensions: ["tables", "fenced_code_blocks"]
+highlighter: rouge
+mathjax: disabled
+sass:
+  style: compressed
 
-
-
-# Disqus settings
-#disqus_username: keysaim
-
-# Netease setttings
-netease_comment: false
-
-# For gitment
-gitment: true
-gitment-repo: comments
-gitment-client-id: 8d920ad685683a529e83
-gitment-client-secret: ffabf134048e374883ee67d3786a9a6b7d8d3cdc
-
-# For test
-#gitment-repo: test-comments
-#gitment-client-id: 3687ee49c8a69a86e75e
-#gitment-client-secret: 53604cc6e16fe16160b36be7d2f379e46994b728
-
-
-# Analytics settings
-# Baidu Analytics 
-# ba_track_id: [your track id]
-
-# Google Analytics
-ga_track_id: 'UA-104622100-1'
-ga_domain: keysaim.github.io
-
-
-
-# Sidebar settings
-sidebar: false                           # whether or not using Sidebar.
-sidebar-about-description: "边栏描述"
-# TODO need add the headshot
-sidebar-avatar: /img/avatar-.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
-
-
-
-# Featured Tags
-featured-tags: true                     # whether or not using Feature-Tags
-featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
-
-
-
-# Progressive Web Apps
-chrome-tab-theme-color: "#000000"
-service-worker: true
-
-
-
-# Friends
-#friends: []
-
-anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
-anchorjs-visible: hover
-anchorjs-icon: §
-anchorjs-placement: right
+# Jekyll Plugin
+# https://help.github.com/articles/adding-jekyll-plugins-to-a-github-pages-site/
+gems:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
 
